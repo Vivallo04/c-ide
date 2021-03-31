@@ -1,0 +1,1 @@
+/usr/bin/c++   -pthread -g   CMakeFiles/FirstC.dir/main.cpp.o CMakeFiles/FirstC.dir/src/App.cpp.o  -o FirstC   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib -L/usr/local/lib -pthread -lwx_gtk3u_core-3.0 -lwx_baseu-3.0 

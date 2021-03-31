@@ -1,24 +1,15 @@
-#include <SFML/Graphics.hpp>
+#include "include/main.h"
 
 
-void initWindow(int windowSize) {
-    sf::RenderWindow window(sf::VideoMode(windowSize, windowSize), "{Window Title}");
+Main::Main() : wxFrame(nullptr, wxID_ANY, "C-IDE",
+                       wxPoint(30, 30),wxSize(800, 600))
+{
+    button1 = new wxButton(this, wxID_ANY, "Click here", wxPoint(10, 10), wxSize(150, 50));
+    //text1 = new wxTextCtrl(this, wxID_ANY, wxPoint(10, 70), wxSize(300, 30));
+    listBox1 = new wxListBox(this, wxID_ANY, wxPoint(10, 110), wxSize(300, 300));
+}
 
-    while (window.isOpen()) {
-        sf::Event event;
+Main::~Main()
+{
 
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-
-            window.display();
-        }
-    }
-};
-
-int main() {
-    initWindow(200);
-
-    return 0;
-};
+}
