@@ -77,22 +77,9 @@ include CMakeFiles/C-IDE.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/C-IDE.dir/flags.make
 
-CMakeFiles/C-IDE.dir/main.cpp.o: CMakeFiles/C-IDE.dir/flags.make
-CMakeFiles/C-IDE.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/main.cpp.o -c /home/vivallo/CLionProjects/C-IDE/main.cpp
-
-CMakeFiles/C-IDE.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/CLionProjects/C-IDE/main.cpp > CMakeFiles/C-IDE.dir/main.cpp.i
-
-CMakeFiles/C-IDE.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/CLionProjects/C-IDE/main.cpp -o CMakeFiles/C-IDE.dir/main.cpp.s
-
 CMakeFiles/C-IDE.dir/src/App.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/App.cpp.o: ../src/App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/App.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/src/App.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/App.cpp.o -c /home/vivallo/CLionProjects/C-IDE/src/App.cpp
 
 CMakeFiles/C-IDE.dir/src/App.cpp.i: cmake_force
@@ -103,16 +90,29 @@ CMakeFiles/C-IDE.dir/src/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/App.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/CLionProjects/C-IDE/src/App.cpp -o CMakeFiles/C-IDE.dir/src/App.cpp.s
 
+CMakeFiles/C-IDE.dir/src/Frame.cpp.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/Frame.cpp.o: ../src/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/Frame.cpp.o -c /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp
+
+CMakeFiles/C-IDE.dir/src/Frame.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/Frame.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp > CMakeFiles/C-IDE.dir/src/Frame.cpp.i
+
+CMakeFiles/C-IDE.dir/src/Frame.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/Frame.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp -o CMakeFiles/C-IDE.dir/src/Frame.cpp.s
+
 # Object files for target C-IDE
 C__IDE_OBJECTS = \
-"CMakeFiles/C-IDE.dir/main.cpp.o" \
-"CMakeFiles/C-IDE.dir/src/App.cpp.o"
+"CMakeFiles/C-IDE.dir/src/App.cpp.o" \
+"CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
 
 # External object files for target C-IDE
 C__IDE_EXTERNAL_OBJECTS =
 
-C-IDE: CMakeFiles/C-IDE.dir/main.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/App.cpp.o
+C-IDE: CMakeFiles/C-IDE.dir/src/Frame.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/build.make
 C-IDE: CMakeFiles/C-IDE.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable C-IDE"

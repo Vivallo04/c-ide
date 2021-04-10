@@ -143,33 +143,6 @@ C-IDE/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/build
 .PHONY : C-IDE/fast
 
-main.o: main.cpp.o
-
-.PHONY : main.o
-
-# target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-
-.PHONY : main.i
-
-# target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-
-.PHONY : main.s
-
-# target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/main.cpp.s
-.PHONY : main.cpp.s
-
 src/App.o: src/App.cpp.o
 
 .PHONY : src/App.o
@@ -197,6 +170,33 @@ src/App.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/App.cpp.s
 .PHONY : src/App.cpp.s
 
+src/Frame.o: src/Frame.cpp.o
+
+.PHONY : src/Frame.o
+
+# target to build an object file
+src/Frame.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/Frame.cpp.o
+.PHONY : src/Frame.cpp.o
+
+src/Frame.i: src/Frame.cpp.i
+
+.PHONY : src/Frame.i
+
+# target to preprocess a source file
+src/Frame.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/Frame.cpp.i
+.PHONY : src/Frame.cpp.i
+
+src/Frame.s: src/Frame.cpp.s
+
+.PHONY : src/Frame.s
+
+# target to generate assembly for a file
+src/Frame.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/Frame.cpp.s
+.PHONY : src/Frame.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -206,12 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... C-IDE"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
 	@echo "... src/App.o"
 	@echo "... src/App.i"
 	@echo "... src/App.s"
+	@echo "... src/Frame.o"
+	@echo "... src/Frame.i"
+	@echo "... src/Frame.s"
 .PHONY : help
 
 

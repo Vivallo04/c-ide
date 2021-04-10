@@ -6,13 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/vivallo/CLionProjects/C-IDE/include/main.h
+/home/vivallo/CLionProjects/C-IDE/include/Frame.h
 wx/wx.h
 /home/vivallo/CLionProjects/C-IDE/include/wx/wx.h
 
-/home/vivallo/CLionProjects/C-IDE/main.cpp
-include/main.h
-/home/vivallo/CLionProjects/C-IDE/include/main.h
+/home/vivallo/CLionProjects/C-IDE/src/Frame.cpp
+wx/wx.h
+/home/vivallo/CLionProjects/C-IDE/src/wx/wx.h
+../include/Frame.h
+/home/vivallo/CLionProjects/C-IDE/include/Frame.h
 
 /usr/local/include/wx-3.0/wx/accel.h
 wx/defs.h

@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "C-IDE"
   "C-IDE.pdb"
-  "CMakeFiles/C-IDE.dir/main.cpp.o"
   "CMakeFiles/C-IDE.dir/src/App.cpp.o"
+  "CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
 )
 
 # Per-language clean rules from dependency scanning.

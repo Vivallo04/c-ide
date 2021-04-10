@@ -95,13 +95,13 @@
 		<Unit filename="/home/vivallo/CLionProjects/C-IDE/include/App.h">
 			<Option target="C-IDE"/>
 		</Unit>
-		<Unit filename="/home/vivallo/CLionProjects/C-IDE/include/main.h">
-			<Option target="C-IDE"/>
-		</Unit>
-		<Unit filename="/home/vivallo/CLionProjects/C-IDE/main.cpp">
+		<Unit filename="/home/vivallo/CLionProjects/C-IDE/include/Frame.h">
 			<Option target="C-IDE"/>
 		</Unit>
 		<Unit filename="/home/vivallo/CLionProjects/C-IDE/src/App.cpp">
+			<Option target="C-IDE"/>
+		</Unit>
+		<Unit filename="/home/vivallo/CLionProjects/C-IDE/src/Frame.cpp">
 			<Option target="C-IDE"/>
 		</Unit>
 		<Unit filename="/home/vivallo/CLionProjects/C-IDE/CMakeLists.txt">
