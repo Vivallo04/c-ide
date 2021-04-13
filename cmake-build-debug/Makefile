@@ -68,10 +68,10 @@ RM = /opt/clion-2020.3.3/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vivallo/CLionProjects/C-IDE
+CMAKE_SOURCE_DIR = "/home/vivallo/Programming Projects/CLionProjects/C-IDE"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vivallo/CLionProjects/C-IDE/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles /home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -197,6 +197,33 @@ src/Frame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/Frame.cpp.s
 .PHONY : src/Frame.cpp.s
 
+src/console/console.o: src/console/console.cpp.o
+
+.PHONY : src/console/console.o
+
+# target to build an object file
+src/console/console.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/console/console.cpp.o
+.PHONY : src/console/console.cpp.o
+
+src/console/console.i: src/console/console.cpp.i
+
+.PHONY : src/console/console.i
+
+# target to preprocess a source file
+src/console/console.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/console/console.cpp.i
+.PHONY : src/console/console.cpp.i
+
+src/console/console.s: src/console/console.cpp.s
+
+.PHONY : src/console/console.s
+
+# target to generate assembly for a file
+src/console/console.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/console/console.cpp.s
+.PHONY : src/console/console.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -212,6 +239,9 @@ help:
 	@echo "... src/Frame.o"
 	@echo "... src/Frame.i"
 	@echo "... src/Frame.s"
+	@echo "... src/console/console.o"
+	@echo "... src/console/console.i"
+	@echo "... src/console/console.s"
 .PHONY : help
 
 

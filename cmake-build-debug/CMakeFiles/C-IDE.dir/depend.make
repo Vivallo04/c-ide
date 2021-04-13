@@ -486,3 +486,6 @@ CMakeFiles/C-IDE.dir/src/Frame.cpp.o: /usr/local/include/wx-3.0/wx/xtiprop.h
 CMakeFiles/C-IDE.dir/src/Frame.cpp.o: /usr/local/include/wx-3.0/wx/xtitypes.h
 CMakeFiles/C-IDE.dir/src/Frame.cpp.o: /usr/local/lib/wx/include/gtk3-unicode-3.0/wx/setup.h
 
+CMakeFiles/C-IDE.dir/src/console/console.cpp.o: ../src/console/console.cpp
+CMakeFiles/C-IDE.dir/src/console/console.cpp.o: ../src/console/console.h
+

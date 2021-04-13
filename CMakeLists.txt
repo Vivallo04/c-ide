@@ -7,7 +7,7 @@ set(wxWidgets_CONFIGURATION mswu)
 find_package(wxWidgets COMPONENTS core base REQUIRED)
 include(${wxWidgets_USE_FILE})
 
-set(SOURCE_FILES src/App.cpp include/App.h src/Frame.cpp include/Frame.h)
+set(SOURCE_FILES src/App.cpp include/App.h src/Frame.cpp include/Frame.h src/console/console.cpp src/console/console.h)
 add_executable(C-IDE ${SOURCE_FILES})
 
 target_link_libraries(C-IDE ${wxWidgets_LIBRARIES})

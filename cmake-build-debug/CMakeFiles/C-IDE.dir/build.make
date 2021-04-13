@@ -63,10 +63,10 @@ RM = /opt/clion-2020.3.3/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vivallo/CLionProjects/C-IDE
+CMAKE_SOURCE_DIR = "/home/vivallo/Programming Projects/CLionProjects/C-IDE"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vivallo/CLionProjects/C-IDE/cmake-build-debug
+CMAKE_BINARY_DIR = "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/C-IDE.dir/depend.make
@@ -79,43 +79,58 @@ include CMakeFiles/C-IDE.dir/flags.make
 
 CMakeFiles/C-IDE.dir/src/App.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/App.cpp.o: ../src/App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/src/App.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/App.cpp.o -c /home/vivallo/CLionProjects/C-IDE/src/App.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/src/App.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/App.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/App.cpp"
 
 CMakeFiles/C-IDE.dir/src/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/App.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/CLionProjects/C-IDE/src/App.cpp > CMakeFiles/C-IDE.dir/src/App.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/App.cpp" > CMakeFiles/C-IDE.dir/src/App.cpp.i
 
 CMakeFiles/C-IDE.dir/src/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/App.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/CLionProjects/C-IDE/src/App.cpp -o CMakeFiles/C-IDE.dir/src/App.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/App.cpp" -o CMakeFiles/C-IDE.dir/src/App.cpp.s
 
 CMakeFiles/C-IDE.dir/src/Frame.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/Frame.cpp.o: ../src/Frame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/Frame.cpp.o -c /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/Frame.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/Frame.cpp"
 
 CMakeFiles/C-IDE.dir/src/Frame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/Frame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp > CMakeFiles/C-IDE.dir/src/Frame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/Frame.cpp" > CMakeFiles/C-IDE.dir/src/Frame.cpp.i
 
 CMakeFiles/C-IDE.dir/src/Frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/Frame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/CLionProjects/C-IDE/src/Frame.cpp -o CMakeFiles/C-IDE.dir/src/Frame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/Frame.cpp" -o CMakeFiles/C-IDE.dir/src/Frame.cpp.s
+
+CMakeFiles/C-IDE.dir/src/console/console.cpp.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/console/console.cpp.o: ../src/console/console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/C-IDE.dir/src/console/console.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/console/console.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/console/console.cpp"
+
+CMakeFiles/C-IDE.dir/src/console/console.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/console/console.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/console/console.cpp" > CMakeFiles/C-IDE.dir/src/console/console.cpp.i
+
+CMakeFiles/C-IDE.dir/src/console/console.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/console/console.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/C-IDE/src/console/console.cpp" -o CMakeFiles/C-IDE.dir/src/console/console.cpp.s
 
 # Object files for target C-IDE
 C__IDE_OBJECTS = \
 "CMakeFiles/C-IDE.dir/src/App.cpp.o" \
-"CMakeFiles/C-IDE.dir/src/Frame.cpp.o"
+"CMakeFiles/C-IDE.dir/src/Frame.cpp.o" \
+"CMakeFiles/C-IDE.dir/src/console/console.cpp.o"
 
 # External object files for target C-IDE
 C__IDE_EXTERNAL_OBJECTS =
 
 C-IDE: CMakeFiles/C-IDE.dir/src/App.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/Frame.cpp.o
+C-IDE: CMakeFiles/C-IDE.dir/src/console/console.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/build.make
 C-IDE: CMakeFiles/C-IDE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable C-IDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable C-IDE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/C-IDE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -128,6 +143,6 @@ CMakeFiles/C-IDE.dir/clean:
 .PHONY : CMakeFiles/C-IDE.dir/clean
 
 CMakeFiles/C-IDE.dir/depend:
-	cd /home/vivallo/CLionProjects/C-IDE/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vivallo/CLionProjects/C-IDE /home/vivallo/CLionProjects/C-IDE /home/vivallo/CLionProjects/C-IDE/cmake-build-debug /home/vivallo/CLionProjects/C-IDE/cmake-build-debug /home/vivallo/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles/C-IDE.dir/DependInfo.cmake --color=$(COLOR)
+	cd "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/vivallo/Programming Projects/CLionProjects/C-IDE" "/home/vivallo/Programming Projects/CLionProjects/C-IDE" "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug" "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug" "/home/vivallo/Programming Projects/CLionProjects/C-IDE/cmake-build-debug/CMakeFiles/C-IDE.dir/DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/C-IDE.dir/depend
 

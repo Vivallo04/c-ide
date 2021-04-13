@@ -28,9 +28,9 @@ END_EVENT_TABLE()
 Frame::Frame(const wxString &title) : wxFrame(NULL, wxID_ANY, title)
 {
     // Set the frame icon
-    //SetIcon("res/icons/C.ico");
-
+    //SetIcon(NULL);
     // Create a menu bar
+    
     wxMenu *fileMenu = new wxMenu;
 
     // The "About" item should be in the help menu
