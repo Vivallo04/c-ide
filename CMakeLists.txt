@@ -1,13 +1,13 @@
 cmake_minimum_required(VERSION 3.7)
 project(C-IDE)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 14)
 
 set(wxWidgets_ROOT_DIR </usr/include/wx-3.0-unofficial>)
 set(wxWidgets_CONFIGURATION mswu)
 find_package(wxWidgets COMPONENTS core base REQUIRED)
 include(${wxWidgets_USE_FILE})
 
-set(SOURCE_FILES src/App.cpp include/App.h src/Frame.cpp include/Frame.h src/console/console.cpp src/console/console.h)
+set(SOURCE_FILES src/ide/App.cpp include/App.h src/ide/Frame.cpp include/Frame.h src/ide/console/console.cpp src/ide/console/console.h src/mserver/mserver.c)
 add_executable(C-IDE ${SOURCE_FILES})
 
 target_link_libraries(C-IDE ${wxWidgets_LIBRARIES})

@@ -1,11 +1,22 @@
 /**
  * Name: App.cpp
  * Purpose: C! IDE, an IDE for the pseudo language C!
- * Author: Andr´es Vivallo
+ * Author: Andrés Vivallo
  */
 #include "wx/wx.h"
-#include "../include/App.h"
-#include "../include/Frame.h"
+#include "wx/wxprec.h"
+#include "console/console.h"
+#include "../../include/App.h"
+#include "../../include/Frame.h"
+#include "log4cxx/logger.h"
+#include "log4cxx/basicconfigurator.h"
+#include "log4cxx/helpers/exception.h"
+
+
+using namespace log4cxx;
+using namespace log4cxx::helpers;
+
+static LoggerPtr  logger(Logger::getLogger("C! IDE"));
 
 /**
  * Application Workflow:
@@ -20,14 +31,14 @@
  * the appropriate handlers.
  */
 
-
 // Implements App & wxGetApp
 // Entry point
 DECLARE_APP(App)
-IMPLEMENT_APP(App)
+//IMPLEMENT_APP(App)
 
 App::App()
 {
+    LOG4CXX_INFO(logger, "Initializing C! IDE...");
 
 }
 
@@ -39,10 +50,15 @@ App::~App()
 bool App::OnInit()
 {
     // Create the main windows application
-    Frame *frame = new Frame(wxT("C! IDE"));
+   
+    Frame *frame = new Frame(wxT("C! IDE"), wxSize(1000, 800));
 
+    wxLogWindow *logWindow = new wxLogWindow(NULL, "Log Window",
+                                             TRUE, TRUE);
     // Show it
     frame -> Show(true);
+    std::cout << "Hello World" << std::endl;
     // Start the event loop
+    //wxLogMessage("Hello World");
     return true;
 }

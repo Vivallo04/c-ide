@@ -2,8 +2,8 @@
 // Created by vivallo on 4/8/21.
 //
 #include "wx/wx.h"
-#include "../include/Frame.h"
-
+#include "../../include/Frame.h"
+#include "log4cxx/logger.h"
 /**
  * In order to create a stastic event table(one that's created at compile time)
  * you need to:
@@ -25,12 +25,15 @@ BEGIN_EVENT_TABLE(Frame, wxFrame)
     EVT_BUTTON(wxID_OK, Frame::OnButtonOK)
 END_EVENT_TABLE()
 
-Frame::Frame(const wxString &title) : wxFrame(NULL, wxID_ANY, title)
+static log4cxx::LoggerPtr logger;
+
+Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY, title)
 {
     // Set the frame icon
-    //SetIcon(NULL);
+    /*SetIcon(NULL);*/
+
+
     // Create a menu bar
-    
     wxMenu *fileMenu = new wxMenu;
 
     // The "About" item should be in the help menu
@@ -52,12 +55,13 @@ Frame::Frame(const wxString &title) : wxFrame(NULL, wxID_ANY, title)
     // Create a status bar, just for fun ;)
     CreateStatusBar(2);
     SetStatusText(wxT("Welcome to C! IDE"));
+    SetMinSize(wxSize(1000, 800));
 }
 
 void Frame::OnQuit(wxCommandEvent &event)
 {
     // Call the destructor
-
+    LOG4CXX_INFO(logger, "Exiting application");
     // Destroy the frame
     Close();
 }

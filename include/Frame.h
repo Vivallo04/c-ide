@@ -10,7 +10,7 @@ class Frame : public wxFrame
 {
 public:
     // Constructor
-    Frame(const wxString &title);
+    Frame(const wxString &title, const wxSize &size);
 
     // Event handlers
     void OnQuit(wxCommandEvent &event);
