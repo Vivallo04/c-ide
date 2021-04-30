@@ -196,32 +196,32 @@ src/ide/Frame.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s
 .PHONY : src/ide/Frame.cpp.s
 
-src/ide/console/console.o: src/ide/console/console.cpp.o
+src/ide/console/Console.o: src/ide/console/Console.cpp.o
 
-.PHONY : src/ide/console/console.o
+.PHONY : src/ide/console/Console.o
 
 # target to build an object file
-src/ide/console/console.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o
-.PHONY : src/ide/console/console.cpp.o
+src/ide/console/Console.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o
+.PHONY : src/ide/console/Console.cpp.o
 
-src/ide/console/console.i: src/ide/console/console.cpp.i
+src/ide/console/Console.i: src/ide/console/Console.cpp.i
 
-.PHONY : src/ide/console/console.i
+.PHONY : src/ide/console/Console.i
 
 # target to preprocess a source file
-src/ide/console/console.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.i
-.PHONY : src/ide/console/console.cpp.i
+src/ide/console/Console.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i
+.PHONY : src/ide/console/Console.cpp.i
 
-src/ide/console/console.s: src/ide/console/console.cpp.s
+src/ide/console/Console.s: src/ide/console/Console.cpp.s
 
-.PHONY : src/ide/console/console.s
+.PHONY : src/ide/console/Console.s
 
 # target to generate assembly for a file
-src/ide/console/console.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.s
-.PHONY : src/ide/console/console.cpp.s
+src/ide/console/Console.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s
+.PHONY : src/ide/console/Console.cpp.s
 
 src/mserver/mserver.o: src/mserver/mserver.c.o
 
@@ -265,9 +265,9 @@ help:
 	@echo "... src/ide/Frame.o"
 	@echo "... src/ide/Frame.i"
 	@echo "... src/ide/Frame.s"
-	@echo "... src/ide/console/console.o"
-	@echo "... src/ide/console/console.i"
-	@echo "... src/ide/console/console.s"
+	@echo "... src/ide/console/Console.o"
+	@echo "... src/ide/console/Console.i"
+	@echo "... src/ide/console/Console.s"
 	@echo "... src/mserver/mserver.o"
 	@echo "... src/mserver/mserver.i"
 	@echo "... src/mserver/mserver.s"

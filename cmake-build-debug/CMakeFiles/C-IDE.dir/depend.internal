@@ -7,7 +7,7 @@ CMakeFiles/C-IDE.dir/src/ide/App.cpp.o
  /home/vivallo/Programming Projects/CLionProjects/c-ide/include/App.h
  /home/vivallo/Programming Projects/CLionProjects/c-ide/include/Frame.h
  /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/App.cpp
- /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.h
+ /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.h
  /usr/include/wx-3.0/wx/accel.h
  /usr/include/wx-3.0/wx/access.h
  /usr/include/wx-3.0/wx/affinematrix2d.h
@@ -490,9 +490,9 @@ CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o
  /usr/include/wx-3.0/wx/xtiprop.h
  /usr/include/wx-3.0/wx/xtitypes.h
  /usr/lib64/wx/include/gtk3-unicode-3.0/wx/setup.h
-CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o
- /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp
- /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.h
+CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o
+ /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp
+ /home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.h
  /usr/include/wx-3.0/wx/accel.h
  /usr/include/wx-3.0/wx/access.h
  /usr/include/wx-3.0/wx/affinematrix2d.h

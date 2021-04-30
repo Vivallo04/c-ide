@@ -5,18 +5,10 @@
  */
 #include "wx/wx.h"
 #include "wx/wxprec.h"
-#include "console/console.h"
+#include "console/Console.h"
 #include "../../include/App.h"
 #include "../../include/Frame.h"
-#include "log4cxx/logger.h"
-#include "log4cxx/basicconfigurator.h"
-#include "log4cxx/helpers/exception.h"
 
-
-using namespace log4cxx;
-using namespace log4cxx::helpers;
-
-static LoggerPtr  logger(Logger::getLogger("C! IDE"));
 
 /**
  * Application Workflow:
@@ -34,11 +26,10 @@ static LoggerPtr  logger(Logger::getLogger("C! IDE"));
 // Implements App & wxGetApp
 // Entry point
 DECLARE_APP(App)
-//IMPLEMENT_APP(App)
+IMPLEMENT_APP(App)
 
 App::App()
 {
-    LOG4CXX_INFO(logger, "Initializing C! IDE...");
 
 }
 
@@ -50,15 +41,13 @@ App::~App()
 bool App::OnInit()
 {
     // Create the main windows application
-   
     Frame *frame = new Frame(wxT("C! IDE"), wxSize(1000, 800));
+    //Console *console = new Console();
 
-    wxLogWindow *logWindow = new wxLogWindow(NULL, "Log Window",
-                                             TRUE, TRUE);
     // Show it
     frame -> Show(true);
     std::cout << "Hello World" << std::endl;
+
     // Start the event loop
-    //wxLogMessage("Hello World");
     return true;
 }

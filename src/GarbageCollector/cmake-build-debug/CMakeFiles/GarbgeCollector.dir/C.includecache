@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/node.c
+node.h
+/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/node.h
+stdlib.h
+-
+
+/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/node.h
+stdio.h
+-
+

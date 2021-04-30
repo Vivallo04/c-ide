@@ -102,18 +102,18 @@ CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp" -o CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s
 
-CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o: CMakeFiles/C-IDE.dir/flags.make
-CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o: ../src/ide/console/console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp"
+CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o: ../src/ide/console/Console.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp"
 
-CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp" > CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.i
+CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp" > CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i
 
-CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp" -o CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.s
+CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp" -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s
 
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o: ../src/mserver/mserver.c
@@ -132,7 +132,7 @@ CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s: cmake_force
 C__IDE_OBJECTS = \
 "CMakeFiles/C-IDE.dir/src/ide/App.cpp.o" \
 "CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o" \
-"CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o" \
+"CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o" \
 "CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
 
 # External object files for target C-IDE
@@ -140,7 +140,7 @@ C__IDE_EXTERNAL_OBJECTS =
 
 C-IDE: CMakeFiles/C-IDE.dir/src/ide/App.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o
-C-IDE: CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o
+C-IDE: CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o
 C-IDE: CMakeFiles/C-IDE.dir/build.make
 C-IDE: CMakeFiles/C-IDE.dir/link.txt

@@ -36,7 +36,7 @@ void increment(void)
     printf("%d\n", counter);
 }
 
-
+/*
 int main(void)
 {
     int a = 2;
@@ -55,5 +55,5 @@ int main(void)
     struct S *bad_s_ptr = (struct S *)bad_buff;
     struct S *good_s_ptr = (struct S *)good_buff;
     return 0;
-}
+}*/
 

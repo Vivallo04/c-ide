@@ -102,10 +102,10 @@
 		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp">
 			<Option target="C-IDE"/>
 		</Unit>
-		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp">
+		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp">
 			<Option target="C-IDE"/>
 		</Unit>
-		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.h">
+		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.h">
 			<Option target="C-IDE"/>
 		</Unit>
 		<Unit filename="/home/vivallo/Programming Projects/CLionProjects/c-ide/src/mserver/mserver.c">

@@ -24,7 +24,7 @@ set(CMAKE_C_TARGET_INCLUDE_PATH
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/App.cpp" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/src/ide/App.cpp.o"
   "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o"
-  "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/console.cpp" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o"
+  "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

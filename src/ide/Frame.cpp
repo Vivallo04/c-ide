@@ -3,9 +3,8 @@
 //
 #include "wx/wx.h"
 #include "../../include/Frame.h"
-#include "log4cxx/logger.h"
-/**
- * In order to create a stastic event table(one that's created at compile time)
+
+/* In order to create a stastic event table(one that's created at compile time)
  * you need to:
  * 1. Declare a new class that is derived directly or indirectly from wxEvtHandler
  * 2. Add a member function for each event that must be handled.
@@ -25,7 +24,6 @@ BEGIN_EVENT_TABLE(Frame, wxFrame)
     EVT_BUTTON(wxID_OK, Frame::OnButtonOK)
 END_EVENT_TABLE()
 
-static log4cxx::LoggerPtr logger;
 
 Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY, title)
 {
@@ -37,12 +35,16 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
     wxMenu *fileMenu = new wxMenu;
 
     // The "About" item should be in the help menu
-    wxMenu *helpMenu = new wxMenu;
+    wxMenu *helpMenu = new wxMenu();
+
+
+
     helpMenu -> Append(wxID_ABOUT, wxT("&About...\tF1"),
                      wxT("Show about dialog"));
 
     fileMenu -> Append(wxID_EXIT, wxT("E&xit\tAlt-x"),
                      wxT("Quit this program"));
+
 
     //Now append the newly created menu to the menu bar
     wxMenuBar *menuBar = new wxMenuBar();
@@ -55,13 +57,13 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
     // Create a status bar, just for fun ;)
     CreateStatusBar(2);
     SetStatusText(wxT("Welcome to C! IDE"));
-    SetMinSize(wxSize(1000, 800));
+    SetMinSize(wxSize(1024, 600));
 }
 
 void Frame::OnQuit(wxCommandEvent &event)
 {
     // Call the destructor
-    LOG4CXX_INFO(logger, "Exiting application");
+    //LOG4CXX_INFO(logger, "Exiting application");
     // Destroy the frame
     Close();
 }
@@ -84,4 +86,11 @@ void Frame::OnButtonOK(wxCommandEvent &event)
 void Frame::OnSize(wxSizeEvent &event)
 {
     wxTopLevelWindowBase::OnSize(event);
+}
+
+void Frame::CreateExtraWindows()
+{
+    wxLogWindow *logWindow = new wxLogWindow(NULL, "Log Window", TRUE, TRUE);
+    logWindow ->Show(true);
+
 }

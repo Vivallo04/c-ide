@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "C-IDE.pdb"
   "CMakeFiles/C-IDE.dir/src/ide/App.cpp.o"
   "CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o"
-  "CMakeFiles/C-IDE.dir/src/ide/console/console.cpp.o"
+  "CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
   "CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
 )
 

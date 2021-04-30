@@ -8,6 +8,7 @@
 
 class Console: wxAppConsole
 {
+
 public:
     bool OnInit();
     int OnRun();
