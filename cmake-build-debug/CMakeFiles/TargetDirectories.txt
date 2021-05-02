@@ -1,3 +1,0 @@
-/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir
