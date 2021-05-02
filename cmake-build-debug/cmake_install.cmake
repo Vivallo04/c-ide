@@ -1,4 +1,4 @@
-# Install script for directory: /home/vivallo/Programming Projects/CLionProjects/c-ide
+# Install script for directory: /home/vivallo/ProgrammingProjects/CLionProjects/c-ide
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

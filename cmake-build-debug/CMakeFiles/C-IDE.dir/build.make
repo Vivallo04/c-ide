@@ -53,19 +53,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/vivallo/Programming Projects/CLionProjects/c-ide"
+CMAKE_SOURCE_DIR = /home/vivallo/ProgrammingProjects/CLionProjects/c-ide
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/C-IDE.dir/depend.make
@@ -78,62 +78,104 @@ include CMakeFiles/C-IDE.dir/flags.make
 
 CMakeFiles/C-IDE.dir/src/ide/App.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/ide/App.cpp.o: ../src/ide/App.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/App.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/App.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/App.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/App.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/App.cpp.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/App.cpp
 
 CMakeFiles/C-IDE.dir/src/ide/App.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/ide/App.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/App.cpp" > CMakeFiles/C-IDE.dir/src/ide/App.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/App.cpp > CMakeFiles/C-IDE.dir/src/ide/App.cpp.i
 
 CMakeFiles/C-IDE.dir/src/ide/App.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/App.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/App.cpp" -o CMakeFiles/C-IDE.dir/src/ide/App.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/App.cpp -o CMakeFiles/C-IDE.dir/src/ide/App.cpp.s
 
 CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o: ../src/ide/Frame.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/Frame.cpp
 
 CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp" > CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/Frame.cpp > CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.i
 
 CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/Frame.cpp" -o CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/Frame.cpp -o CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.s
 
 CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o: ../src/ide/console/Console.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/console/Console.cpp
 
 CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp" > CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/console/Console.cpp > CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.i
 
 CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/ide/console/Console.cpp" -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/ide/console/Console.cpp -o CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s
 
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o: CMakeFiles/C-IDE.dir/flags.make
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o: ../src/mserver/mserver.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o -c "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/mserver/mserver.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/mserver.c
 
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-IDE.dir/src/mserver/mserver.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/mserver/mserver.c" > CMakeFiles/C-IDE.dir/src/mserver/mserver.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/mserver.c > CMakeFiles/C-IDE.dir/src/mserver/mserver.c.i
 
 CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/vivallo/Programming Projects/CLionProjects/c-ide/src/mserver/mserver.c" -o CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/mserver.c -o CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s
+
+CMakeFiles/C-IDE.dir/src/mserver/client.c.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/mserver/client.c.o: ../src/mserver/client.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/C-IDE.dir/src/mserver/client.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C-IDE.dir/src/mserver/client.c.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/client.c
+
+CMakeFiles/C-IDE.dir/src/mserver/client.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-IDE.dir/src/mserver/client.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/client.c > CMakeFiles/C-IDE.dir/src/mserver/client.c.i
+
+CMakeFiles/C-IDE.dir/src/mserver/client.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-IDE.dir/src/mserver/client.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/client.c -o CMakeFiles/C-IDE.dir/src/mserver/client.c.s
+
+CMakeFiles/C-IDE.dir/src/mserver/node.c.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/mserver/node.c.o: ../src/mserver/node.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/C-IDE.dir/src/mserver/node.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C-IDE.dir/src/mserver/node.c.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/node.c
+
+CMakeFiles/C-IDE.dir/src/mserver/node.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-IDE.dir/src/mserver/node.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/node.c > CMakeFiles/C-IDE.dir/src/mserver/node.c.i
+
+CMakeFiles/C-IDE.dir/src/mserver/node.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-IDE.dir/src/mserver/node.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/node.c -o CMakeFiles/C-IDE.dir/src/mserver/node.c.s
+
+CMakeFiles/C-IDE.dir/src/mserver/server.c.o: CMakeFiles/C-IDE.dir/flags.make
+CMakeFiles/C-IDE.dir/src/mserver/server.c.o: ../src/mserver/server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object CMakeFiles/C-IDE.dir/src/mserver/server.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/C-IDE.dir/src/mserver/server.c.o -c /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/server.c
+
+CMakeFiles/C-IDE.dir/src/mserver/server.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/C-IDE.dir/src/mserver/server.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/server.c > CMakeFiles/C-IDE.dir/src/mserver/server.c.i
+
+CMakeFiles/C-IDE.dir/src/mserver/server.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/C-IDE.dir/src/mserver/server.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/src/mserver/server.c -o CMakeFiles/C-IDE.dir/src/mserver/server.c.s
 
 # Object files for target C-IDE
 C__IDE_OBJECTS = \
 "CMakeFiles/C-IDE.dir/src/ide/App.cpp.o" \
 "CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o" \
 "CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o" \
-"CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
+"CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o" \
+"CMakeFiles/C-IDE.dir/src/mserver/client.c.o" \
+"CMakeFiles/C-IDE.dir/src/mserver/node.c.o" \
+"CMakeFiles/C-IDE.dir/src/mserver/server.c.o"
 
 # External object files for target C-IDE
 C__IDE_EXTERNAL_OBJECTS =
@@ -142,9 +184,12 @@ C-IDE: CMakeFiles/C-IDE.dir/src/ide/App.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o
 C-IDE: CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o
+C-IDE: CMakeFiles/C-IDE.dir/src/mserver/client.c.o
+C-IDE: CMakeFiles/C-IDE.dir/src/mserver/node.c.o
+C-IDE: CMakeFiles/C-IDE.dir/src/mserver/server.c.o
 C-IDE: CMakeFiles/C-IDE.dir/build.make
 C-IDE: CMakeFiles/C-IDE.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable C-IDE"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable C-IDE"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/C-IDE.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -157,6 +202,6 @@ CMakeFiles/C-IDE.dir/clean:
 .PHONY : CMakeFiles/C-IDE.dir/clean
 
 CMakeFiles/C-IDE.dir/depend:
-	cd "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/vivallo/Programming Projects/CLionProjects/c-ide" "/home/vivallo/Programming Projects/CLionProjects/c-ide" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vivallo/ProgrammingProjects/CLionProjects/c-ide /home/vivallo/ProgrammingProjects/CLionProjects/c-ide /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles/C-IDE.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/C-IDE.dir/depend
 

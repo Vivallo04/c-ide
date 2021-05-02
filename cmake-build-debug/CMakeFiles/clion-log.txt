@@ -1,4 +1,4 @@
-/home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" "/home/vivallo/Programming Projects/CLionProjects/c-ide"
+/var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/vivallo/ProgrammingProjects/CLionProjects/c-ide
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug
+-- Build files have been written to: /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug

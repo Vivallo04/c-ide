@@ -58,19 +58,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -E rm -f
+RM = /var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/vivallo/Programming Projects/CLionProjects/c-ide"
+CMAKE_SOURCE_DIR = /home/vivallo/ProgrammingProjects/CLionProjects/c-ide
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug"
+CMAKE_BINARY_DIR = /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ CMAKE_BINARY_DIR = "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -89,7 +89,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/vivallo/Downloads/CLion-2021.1/clion-2021.1/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/var/lib/snapd/snap/clion/151/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -99,9 +99,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/vivallo/Programming Projects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vivallo/ProgrammingProjects/CLionProjects/c-ide/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -223,6 +223,33 @@ src/ide/console/Console.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.s
 .PHONY : src/ide/console/Console.cpp.s
 
+src/mserver/client.o: src/mserver/client.c.o
+
+.PHONY : src/mserver/client.o
+
+# target to build an object file
+src/mserver/client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/client.c.o
+.PHONY : src/mserver/client.c.o
+
+src/mserver/client.i: src/mserver/client.c.i
+
+.PHONY : src/mserver/client.i
+
+# target to preprocess a source file
+src/mserver/client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/client.c.i
+.PHONY : src/mserver/client.c.i
+
+src/mserver/client.s: src/mserver/client.c.s
+
+.PHONY : src/mserver/client.s
+
+# target to generate assembly for a file
+src/mserver/client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/client.c.s
+.PHONY : src/mserver/client.c.s
+
 src/mserver/mserver.o: src/mserver/mserver.c.o
 
 .PHONY : src/mserver/mserver.o
@@ -250,6 +277,60 @@ src/mserver/mserver.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/mserver.c.s
 .PHONY : src/mserver/mserver.c.s
 
+src/mserver/node.o: src/mserver/node.c.o
+
+.PHONY : src/mserver/node.o
+
+# target to build an object file
+src/mserver/node.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/node.c.o
+.PHONY : src/mserver/node.c.o
+
+src/mserver/node.i: src/mserver/node.c.i
+
+.PHONY : src/mserver/node.i
+
+# target to preprocess a source file
+src/mserver/node.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/node.c.i
+.PHONY : src/mserver/node.c.i
+
+src/mserver/node.s: src/mserver/node.c.s
+
+.PHONY : src/mserver/node.s
+
+# target to generate assembly for a file
+src/mserver/node.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/node.c.s
+.PHONY : src/mserver/node.c.s
+
+src/mserver/server.o: src/mserver/server.c.o
+
+.PHONY : src/mserver/server.o
+
+# target to build an object file
+src/mserver/server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/server.c.o
+.PHONY : src/mserver/server.c.o
+
+src/mserver/server.i: src/mserver/server.c.i
+
+.PHONY : src/mserver/server.i
+
+# target to preprocess a source file
+src/mserver/server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/server.c.i
+.PHONY : src/mserver/server.c.i
+
+src/mserver/server.s: src/mserver/server.c.s
+
+.PHONY : src/mserver/server.s
+
+# target to generate assembly for a file
+src/mserver/server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/C-IDE.dir/build.make CMakeFiles/C-IDE.dir/src/mserver/server.c.s
+.PHONY : src/mserver/server.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -268,9 +349,18 @@ help:
 	@echo "... src/ide/console/Console.o"
 	@echo "... src/ide/console/Console.i"
 	@echo "... src/ide/console/Console.s"
+	@echo "... src/mserver/client.o"
+	@echo "... src/mserver/client.i"
+	@echo "... src/mserver/client.s"
 	@echo "... src/mserver/mserver.o"
 	@echo "... src/mserver/mserver.i"
 	@echo "... src/mserver/mserver.s"
+	@echo "... src/mserver/node.o"
+	@echo "... src/mserver/node.i"
+	@echo "... src/mserver/node.s"
+	@echo "... src/mserver/server.o"
+	@echo "... src/mserver/server.i"
+	@echo "... src/mserver/server.s"
 .PHONY : help
 
 

@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
 
-C_INCLUDES = -isystem /usr/lib64/wx/include/gtk3-unicode-3.0 -isystem /usr/include/wx-3.0
+C_INCLUDES = -isystem /usr/lib64/wx/include/gtk3-unicode-3.1 -isystem /usr/include/wx-3.1
 
 C_FLAGS = -g
 
 CXX_DEFINES = -DWXUSINGDLL -D_FILE_OFFSET_BITS=64 -D__WXGTK__
 
-CXX_INCLUDES = -isystem /usr/lib64/wx/include/gtk3-unicode-3.0 -isystem /usr/include/wx-3.0
+CXX_INCLUDES = -isystem /usr/lib64/wx/include/gtk3-unicode-3.1 -isystem /usr/include/wx-3.1
 
 CXX_FLAGS =  -pthread -g -std=gnu++14
 

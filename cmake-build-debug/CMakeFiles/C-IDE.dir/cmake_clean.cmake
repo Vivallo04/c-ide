@@ -4,7 +4,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/C-IDE.dir/src/ide/App.cpp.o"
   "CMakeFiles/C-IDE.dir/src/ide/Frame.cpp.o"
   "CMakeFiles/C-IDE.dir/src/ide/console/Console.cpp.o"
+  "CMakeFiles/C-IDE.dir/src/mserver/client.c.o"
   "CMakeFiles/C-IDE.dir/src/mserver/mserver.c.o"
+  "CMakeFiles/C-IDE.dir/src/mserver/node.c.o"
+  "CMakeFiles/C-IDE.dir/src/mserver/server.c.o"
 )
 
 # Per-language clean rules from dependency scanning.
