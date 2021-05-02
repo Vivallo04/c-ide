@@ -9,6 +9,11 @@ typedef struct Node
     int *address;
     unsigned int size;
     struct Node *next;
-} node;
+} head;
+
+// Declare methods
+void print_list_nodes(struct Node *node);
+void append_node(struct Node **head, int data);
+void push_node(struct Node **head, int data);
 
 #endif //GARBGECOLLECTOR_NODE_H

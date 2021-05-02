@@ -1,4 +1,3 @@
-#
 #include "node.h"
 #include <stdlib.h>
 
@@ -34,26 +33,4 @@ void append_node(struct Node **head, int data)
         last = last -> next;
     }
     last -> next = new_node;
-}
-
-int main(void)
-{
-    struct Node *head = malloc(sizeof(struct Node));
-    struct Node *second = malloc(sizeof(struct Node));
-    struct Node *third = malloc(sizeof(struct Node));
-
-    head -> value = 1;
-    append_node(&head, 2);
-    append_node(&head, 3);
-    append_node(&head, 4);
-    append_node(&head, 5);
-    append_node(&head, 6);
-    append_node(&head, 7);
-    append_node(&head, 8);
-    append_node(&head, 9);
-    append_node(&head, 10);
-    push_node(&head, 0);
-    print_list_nodes(head);
-    return 0;
-
 }

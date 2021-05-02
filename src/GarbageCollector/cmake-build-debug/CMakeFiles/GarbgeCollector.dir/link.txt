@@ -1,1 +1,0 @@
-/usr/bin/cc -g CMakeFiles/GarbgeCollector.dir/mserver.c.o CMakeFiles/GarbgeCollector.dir/server.c.o CMakeFiles/GarbgeCollector.dir/client.c.o CMakeFiles/GarbgeCollector.dir/node.c.o -o GarbgeCollector 

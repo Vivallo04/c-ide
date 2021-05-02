@@ -1,59 +1,78 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
+#include <memory.h>
+#include <malloc.h>
+#include "node.h"
 
-//Four types of storage duration in C: automatic, static
-// thread and allocated.
+// Add a threading library compatible with C and C++
+#include <pthread.h>
+#include <unistd.h>
 
-/**
- * Automatic: The ones declared within a block or as a function parameter.
- * Static: The lifetime of these objetcs is the entire execution of the program
- * and their stored value is initialized prior to program startup.
- * Thread: Used in concurrent programming.
- * Allocated: Dynamically allocated memory (chapter 6).
- */
+// Declare static variables
+bool OnQuit = false;
 
-void swap(int *a, int *b);
-void increment(void);
+int reserve_memory(size_t bytes, void *reserve);
+size_t get_total_memory(void);
+void create_linked_list(void);
 
-struct S
-{
-    int i;
-    double d;
-    char c;
-};
 
-void swap(int *a, int *b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
-void increment(void)
-{
-    static unsigned int counter = 0;
-    counter++;
-    printf("%d\n", counter);
-}
-
-/*
+// Entry Point
 int main(void)
 {
-    int a = 2;
-    int b = 5;
-    bool flag = true;
-    swap(&a, &b);
-    printf("a = %d, b = %d\n", a, b);
+    int num = 0;
+    int *num_ptr = &num;
+    bool collecting = true;
 
-    for (int i = 0; i < 10; i++) {
-        increment();
+    create_linked_list();
+    size_t memory_size = 1;
+    void *reserve;
+
+    reserve_memory(memory_size, &reserve);
+    while (collecting)
+    {
+        printf("Collecting unused memory... %d\n", *num_ptr);
+        *num_ptr += 1;
+        sleep(1);
+
+        if (OnQuit)
+        {
+            collecting = false;
+        }
     }
-
-    unsigned char bad_buff[sizeof(struct S)];
-    _Alignas(struct S) unsigned char good_buff[sizeof(struct S)];
-
-    struct S *bad_s_ptr = (struct S *)bad_buff;
-    struct S *good_s_ptr = (struct S *)good_buff;
+    free(reserve);
     return 0;
-}*/
+}
+
+
+int reserve_memory(size_t bytes, void *reserve)
+{
+    reserve = malloc(bytes);
+    if (reserve)
+    {
+        printf("Allocated %zu bytes from %lx to %lx\n", bytes, reserve, (bytes + reserve));
+    } else if (reserve == NULL) {
+        printf("Error in allocation\n");
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
+}
+
+void create_linked_list(void)
+{
+    struct Node *head = malloc(sizeof(struct Node));
+    head -> value = 1;
+
+    append_node(&head, 2);
+    append_node(&head, 3);
+    append_node(&head, 4);
+    append_node(&head, 5);
+    append_node(&head, 6);
+    append_node(&head, 7);
+    append_node(&head, 8);
+    append_node(&head, 9);
+    append_node(&head, 10);
+    push_node(&head, 0);
+    print_list_nodes(head);
+}
 

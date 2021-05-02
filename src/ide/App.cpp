@@ -22,11 +22,10 @@
  * 5. wxWidgets starts the event loop, waiting for event and dispatching them to
  * the appropriate handlers.
  */
-
 // Implements App & wxGetApp
 // Entry point
 DECLARE_APP(App)
-IMPLEMENT_APP(App)
+//IMPLEMENT_APP(App)
 
 App::App()
 {

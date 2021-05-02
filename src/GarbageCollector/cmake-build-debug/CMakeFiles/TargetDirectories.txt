@@ -1,3 +1,0 @@
-/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/vivallo/Programming Projects/CLionProjects/GarbageCollector/cmake-build-debug/CMakeFiles/GarbgeCollector.dir
