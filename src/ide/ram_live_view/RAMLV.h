@@ -13,10 +13,14 @@
 
 class RAMLV
 {
+private:
+    wxGrid *grid;
+
 public:
-    RAMLV(wxFrame *parent);
-    void CreateGrid(wxFrame *parent);
+    explicit RAMLV(wxPanel *parent);
+    void CreateGrid(wxPanel *parent);
     void PopulateGrid(wxGrid *grid, long *address, std::string name, int *value, int ref_num);
+    wxGrid *GetGrid();
 };
 
 

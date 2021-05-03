@@ -6,32 +6,40 @@
 #include "wx/grid.h"
 
 
-RAMLV::RAMLV(wxFrame *parent)
+RAMLV::RAMLV(wxPanel *parent)
 {
     CreateGrid(parent);
 }
 
 
 
-void RAMLV::CreateGrid(wxFrame *parent)
+void RAMLV::CreateGrid(wxPanel *parent)
 {
     // Create a wxGrid object
-    wxGrid *grid = new wxGrid(parent, -1,
+    wxGrid *grid = new wxGrid(parent, wxID_ANY,
                               wxPoint(0, 0),
-                              wxSize(200, 400));
+                              wxSize(323, 720));
 
     // Set the grid dimensions
-    grid -> CreateGrid(10, 4);
+    grid -> CreateGrid(14, 3);
 
     // Set Row and Column sizes
-    grid -> SetRowSize(0, 10);
-    grid -> SetColSize(0, 25);
+    grid -> SetRowSize(0, 2);
+    grid -> SetColSize(0, 10);
+    grid -> CanEnableCellControl();
 }
 
 void RAMLV::PopulateGrid(wxGrid *grid, long *address, std::string name, int *value, int ref_num)
 {
     for(int i = 0; i < grid -> GetNumberRows(); i++)
     {
+        for (int j = 0; j < grid -> GetNumberCols(); j++)
+        {
 
+        }
     }
+}
+
+wxGrid *RAMLV::GetGrid() {
+    return grid;
 }

@@ -19,6 +19,7 @@ public:
     void OnButtonOK(wxCommandEvent &event);
     void CreateMenuBar();
     void CreateExtraWindows();
+    void SetLoggingWindow(wxPanel *parent);
 
 private:
     // This class handles events

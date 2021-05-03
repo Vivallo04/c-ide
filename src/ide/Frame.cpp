@@ -5,7 +5,7 @@
 #include "../../include/Frame.h"
 #include "wx/splitter.h"
 #include "./ram_live_view/RAMLV.h"
-
+#include "./application_log/LoggingFrame.h"
 
 #define ID_TextBox 201
 
@@ -56,13 +56,18 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
 
     wxTextCtrl *textControl = new wxTextCtrl;
     textControl = new wxTextCtrl(left, ID_TextBox, wxT(""), wxDefaultPosition,
-                                 wxSize(1080, 800),wxTE_MULTILINE | wxTE_RICH,
+                                 wxSize(1280, 800),wxTE_MULTILINE | wxTE_RICH,
                                  wxDefaultValidator, wxTextCtrlNameStr);
 
-    //sizer -> Add(textControl, 1, wxEXPAND, 5);
-    wxLogMessage(wxT("Application Initialized"));
+    // Add the RAM LIVE VIEW Panel
+    RAMLV *ramlv = new RAMLV(right);
+
+    //Add the logging frame
+    LoggingFrame *logFrame = new LoggingFrame(bottom);
+
 
     CreateMenuBar();
+
     // Create a status bar, just for fun ;)
     CreateStatusBar(2);
     CreateExtraWindows();
@@ -83,6 +88,7 @@ void Frame::OnAbout(wxCommandEvent &event)
                    wxVERSION_STRING);
     wxMessageBox(message, wxT("About C! IDE"),
                  wxOK | wxICON_INFORMATION, this);
+    wxLogMessage("All setup");
 }
 
 void Frame::OnButtonOK(wxCommandEvent &event)
@@ -98,7 +104,7 @@ void Frame::OnSize(wxSizeEvent &event)
 
 void Frame::CreateExtraWindows()
 {
-    //RAMLV *ram_live_view = new RAMLV();
+
 }
 
 void Frame::CreateMenuBar()
