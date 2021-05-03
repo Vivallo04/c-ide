@@ -9,7 +9,8 @@ include(${wxWidgets_USE_FILE})
 
 
 set(SOURCE_FILES src/ide/App.cpp include/App.h src/ide/Frame.cpp include/Frame.h src/ide/console/Console.cpp src/ide/console/Console.h
-        src/mserver/mserver.c src/mserver/client.c src/mserver/node.c src/mserver/node.h src/mserver/server.c src/ide/Panels.cpp include/Panels.h src/ide/Communicate.cpp include/Communicate.h)
+        src/mserver/mserver.c src/mserver/client.c src/mserver/node.c src/mserver/node.h src/mserver/server.c
+        src/ide/ram_live_view/RAMLV.cpp src/ide/ram_live_view/RAMLV.h)
 
 add_executable(C-IDE ${SOURCE_FILES})
 target_link_libraries(C-IDE ${wxWidgets_LIBRARIES})

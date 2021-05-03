@@ -4,10 +4,12 @@
 #include "wx/wx.h"
 #include "../../include/Frame.h"
 #include "wx/splitter.h"
+#include "./ram_live_view/RAMLV.h"
+
 
 #define ID_TextBox 201
 
-/* In order to create a stastic event table(one that's created at compile time)
+/* In order to create a static event table(one that's created at compile time)
  * you need to:
  * 1. Declare a new class that is derived directly or indirectly from wxEvtHandler
  * 2. Add a member function for each event that must be handled.
@@ -44,7 +46,7 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
 
     left -> SetBackgroundColour(wxColour(200, 100, 100));
     right -> SetBackgroundColour(wxColour(100, 200, 100));
-    bottom -> SetBackgroundColour(wxColour(200, 200, 100));
+    bottom -> SetBackgroundColour(wxColour(0, 0, 0));
 
     rightSplitter -> SetMinimumPaneSize(400);
     rightSplitter -> SplitHorizontally(right, bottom);
@@ -96,7 +98,7 @@ void Frame::OnSize(wxSizeEvent &event)
 
 void Frame::CreateExtraWindows()
 {
-
+    //RAMLV *ram_live_view = new RAMLV();
 }
 
 void Frame::CreateMenuBar()
@@ -108,7 +110,7 @@ void Frame::CreateMenuBar()
     // The "About" item should be in the help menu
     wxMenu *helpMenu = new wxMenu();
 
-    wxMenu *aboutMenu = new wxMenu();
+    wxMenu *runButton = new wxMenu();
 
     helpMenu -> Append(wxID_ABOUT, wxT("&About...\tF1"),
                        wxT("Show about dialog"));
@@ -118,7 +120,7 @@ void Frame::CreateMenuBar()
                        wxT("Quit this program"));
     fileMenu -> AppendSeparator();
 
-    aboutMenu ->Append(wxID_ANY, wxT("A"), wxT(""));
+    runButton ->Append(wxID_ANY, wxT("&Run Code\tShift-F10"), wxT("RUN"));
 
 
 
@@ -126,6 +128,7 @@ void Frame::CreateMenuBar()
     wxMenuBar *menuBar = new wxMenuBar();
     menuBar -> Append(fileMenu, wxT("&File"));
     menuBar -> Append(helpMenu, wxT("&Help"));
+    menuBar -> Append(runButton, wxT("&Run"));
 
     // Attach this menu bar to the frame
     SetMenuBar(menuBar);

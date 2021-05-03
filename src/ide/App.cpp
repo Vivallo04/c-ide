@@ -9,7 +9,6 @@
 #include "console/Console.h"
 #include "../../include/App.h"
 #include "../../include/Frame.h"
-#include "../../include/Communicate.h"
 
 /**
  * Application Workflow:
