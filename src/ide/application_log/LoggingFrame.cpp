@@ -29,6 +29,6 @@ void *LoggingFrame::GetLoggingWindow() const
 LoggingFrame::LoggingFrame(wxPanel *parent)
 {
     wxTextCtrl *log = new wxTextCtrl(parent, wxID_ANY, wxEmptyString, wxDefaultPosition,
-                                     wxSize(323, 200), wxTE_MULTILINE | wxTE_READONLY);
+                                     wxSize(323, 250), wxTE_MULTILINE | wxTE_READONLY);
     SetLoggingWindow();
 }

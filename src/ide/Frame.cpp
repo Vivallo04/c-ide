@@ -6,8 +6,8 @@
 #include "wx/splitter.h"
 #include "./ram_live_view/RAMLV.h"
 #include "./application_log/LoggingFrame.h"
+#include "./code_editor/CodeEditor.h"
 
-#define ID_TextBox 201
 
 /* In order to create a static event table(one that's created at compile time)
  * you need to:
@@ -40,8 +40,8 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
                                                            wxDefaultPosition, wxDefaultSize,
                                                            wxSP_BORDER | wxSP_LIVE_UPDATE);
 
-    wxPanel *left = new wxPanel(splitterWindow);
-    wxPanel *right = new wxPanel(rightSplitter);
+    wxPanel *left   = new wxPanel(splitterWindow);
+    wxPanel *right  = new wxPanel(rightSplitter);
     wxPanel *bottom = new wxPanel(rightSplitter);
 
     left -> SetBackgroundColour(wxColour(200, 100, 100));
@@ -51,19 +51,24 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
     rightSplitter -> SetMinimumPaneSize(400);
     rightSplitter -> SplitHorizontally(right, bottom);
 
-    splitterWindow -> SetMinimumPaneSize(900);
+    splitterWindow -> SetMinimumPaneSize(1000);
     splitterWindow -> SplitVertically(left, rightSplitter);
 
-    wxTextCtrl *textControl = new wxTextCtrl;
-    textControl = new wxTextCtrl(left, ID_TextBox, wxT(""), wxDefaultPosition,
-                                 wxSize(1280, 800),wxTE_MULTILINE | wxTE_RICH,
-                                 wxDefaultValidator, wxTextCtrlNameStr);
+
 
     // Add the RAM LIVE VIEW Panel
     RAMLV *ramlv = new RAMLV(right);
 
+    //Add the code editor space
+    CodeEditor *codeEditor = new CodeEditor(left);
+
     //Add the logging frame
     LoggingFrame *logFrame = new LoggingFrame(bottom);
+
+    //TODO: 1- solve log out from the new LoggingFrame class
+    // 2- add the interpreter, save files and create new ones.
+    // 3- Create a connection between mserver and the C! IDE using sockets
+    // 4- Remember to create a separate thread for mserver.
 
 
     CreateMenuBar();
@@ -72,7 +77,7 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
     CreateStatusBar(2);
     CreateExtraWindows();
     SetStatusText(wxT("Welcome to C! IDE"));
-    SetMinSize(wxSize(1280, 720));
+    SetMinSize(wxSize(1366, 768));
 }
 
 void Frame::OnQuit(wxCommandEvent &event)
@@ -115,8 +120,8 @@ void Frame::CreateMenuBar()
 
     // The "About" item should be in the help menu
     wxMenu *helpMenu = new wxMenu();
-
     wxMenu *runButton = new wxMenu();
+    wxMenu *logMenu = new wxMenu();
 
     helpMenu -> Append(wxID_ABOUT, wxT("&About...\tF1"),
                        wxT("Show about dialog"));
@@ -126,15 +131,22 @@ void Frame::CreateMenuBar()
                        wxT("Quit this program"));
     fileMenu -> AppendSeparator();
 
-    runButton ->Append(wxID_ANY, wxT("&Run Code\tShift-F10"), wxT("RUN"));
+    runButton -> Append(wxID_ANY, wxT("&Run C! code\tShift-F10"),
+                        wxT("RUN"));
+    runButton -> AppendSeparator();
 
+    logMenu -> Append(wxID_ANY, wxT("&Save as\tAlt-1"),
+                      wxT("Save logs into a text file"));
+    logMenu -> AppendSeparator();
 
 
     //Now append the newly created menu to the menu bar
     wxMenuBar *menuBar = new wxMenuBar();
-    menuBar -> Append(fileMenu, wxT("&File"));
-    menuBar -> Append(helpMenu, wxT("&Help"));
+    menuBar -> Append(fileMenu,  wxT("&File"));
+    menuBar -> Append(helpMenu,  wxT("&Help"));
     menuBar -> Append(runButton, wxT("&Run"));
+    menuBar -> Append(logMenu,   wxT("&Log"));
+
 
     // Attach this menu bar to the frame
     SetMenuBar(menuBar);
