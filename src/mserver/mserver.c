@@ -16,7 +16,7 @@ int reserve_memory(size_t bytes, void *reserve);
 size_t get_total_memory(void);
 void create_linked_list(void);
 
-
+/*
 // Entry Point
 int main(void)
 {
@@ -25,7 +25,7 @@ int main(void)
     bool collecting = true;
 
     create_linked_list();
-    size_t memory_size = 1;
+    size_t memory_size = 100000;
     void *reserve;
 
     reserve_memory(memory_size, &reserve);
@@ -43,7 +43,7 @@ int main(void)
     free(reserve);
     return 0;
 }
-
+*/
 
 int reserve_memory(size_t bytes, void *reserve)
 {

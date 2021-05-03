@@ -3,6 +3,9 @@
 //
 #include "wx/wx.h"
 #include "../../include/Frame.h"
+#include "wx/splitter.h"
+
+#define ID_TextBox 201
 
 /* In order to create a stastic event table(one that's created at compile time)
  * you need to:
@@ -27,43 +30,46 @@ END_EVENT_TABLE()
 
 Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY, title)
 {
-    // Set the frame icon
-    /*SetIcon(NULL);*/
+    wxSplitterWindow *splitterWindow = new wxSplitterWindow(this, wxID_ANY,
+                                                            wxDefaultPosition, wxDefaultSize,
+                                                            wxSP_BORDER | wxSP_LIVE_UPDATE);
 
+    wxSplitterWindow *rightSplitter = new wxSplitterWindow(splitterWindow, wxID_ANY,
+                                                           wxDefaultPosition, wxDefaultSize,
+                                                           wxSP_BORDER | wxSP_LIVE_UPDATE);
 
-    // Create a menu bar
-    wxMenu *fileMenu = new wxMenu;
+    wxPanel *left = new wxPanel(splitterWindow);
+    wxPanel *right = new wxPanel(rightSplitter);
+    wxPanel *bottom = new wxPanel(rightSplitter);
 
-    // The "About" item should be in the help menu
-    wxMenu *helpMenu = new wxMenu();
+    left -> SetBackgroundColour(wxColour(200, 100, 100));
+    right -> SetBackgroundColour(wxColour(100, 200, 100));
+    bottom -> SetBackgroundColour(wxColour(200, 200, 100));
 
+    rightSplitter -> SetMinimumPaneSize(400);
+    rightSplitter -> SplitHorizontally(right, bottom);
 
+    splitterWindow -> SetMinimumPaneSize(900);
+    splitterWindow -> SplitVertically(left, rightSplitter);
 
-    helpMenu -> Append(wxID_ABOUT, wxT("&About...\tF1"),
-                     wxT("Show about dialog"));
+    wxTextCtrl *textControl = new wxTextCtrl;
+    textControl = new wxTextCtrl(left, ID_TextBox, wxT(""), wxDefaultPosition,
+                                 wxSize(1080, 800),wxTE_MULTILINE | wxTE_RICH,
+                                 wxDefaultValidator, wxTextCtrlNameStr);
 
-    fileMenu -> Append(wxID_EXIT, wxT("E&xit\tAlt-x"),
-                     wxT("Quit this program"));
+    //sizer -> Add(textControl, 1, wxEXPAND, 5);
+    wxLogMessage(wxT("Application Initialized"));
 
-
-    //Now append the newly created menu to the menu bar
-    wxMenuBar *menuBar = new wxMenuBar();
-    menuBar -> Append(fileMenu, wxT("&File"));
-    menuBar -> Append(helpMenu, wxT("&Help"));
-
-    // Attach this menu bar to the frame
-    SetMenuBar(menuBar);
-
+    CreateMenuBar();
     // Create a status bar, just for fun ;)
     CreateStatusBar(2);
+    CreateExtraWindows();
     SetStatusText(wxT("Welcome to C! IDE"));
-    SetMinSize(wxSize(1024, 600));
+    SetMinSize(wxSize(1280, 720));
 }
 
 void Frame::OnQuit(wxCommandEvent &event)
 {
-    // Call the destructor
-    //LOG4CXX_INFO(logger, "Exiting application");
     // Destroy the frame
     Close();
 }
@@ -90,7 +96,37 @@ void Frame::OnSize(wxSizeEvent &event)
 
 void Frame::CreateExtraWindows()
 {
-    wxLogWindow *logWindow = new wxLogWindow(NULL, "Log Window", TRUE, TRUE);
-    logWindow ->Show(true);
 
+}
+
+void Frame::CreateMenuBar()
+{
+
+    // Create a menu bar
+    wxMenu *fileMenu = new wxMenu();
+
+    // The "About" item should be in the help menu
+    wxMenu *helpMenu = new wxMenu();
+
+    wxMenu *aboutMenu = new wxMenu();
+
+    helpMenu -> Append(wxID_ABOUT, wxT("&About...\tF1"),
+                       wxT("Show about dialog"));
+    helpMenu -> AppendSeparator();
+
+    fileMenu -> Append(wxID_EXIT, wxT("E&xit\tAlt-x"),
+                       wxT("Quit this program"));
+    fileMenu -> AppendSeparator();
+
+    aboutMenu ->Append(wxID_ANY, wxT("A"), wxT(""));
+
+
+
+    //Now append the newly created menu to the menu bar
+    wxMenuBar *menuBar = new wxMenuBar();
+    menuBar -> Append(fileMenu, wxT("&File"));
+    menuBar -> Append(helpMenu, wxT("&Help"));
+
+    // Attach this menu bar to the frame
+    SetMenuBar(menuBar);
 }

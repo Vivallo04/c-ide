@@ -5,10 +5,11 @@
  */
 #include "wx/wx.h"
 #include "wx/wxprec.h"
+#include "wx/layout.h"
 #include "console/Console.h"
 #include "../../include/App.h"
 #include "../../include/Frame.h"
-
+#include "../../include/Communicate.h"
 
 /**
  * Application Workflow:
@@ -22,10 +23,11 @@
  * 5. wxWidgets starts the event loop, waiting for event and dispatching them to
  * the appropriate handlers.
  */
+
 // Implements App & wxGetApp
 // Entry point
 DECLARE_APP(App)
-//IMPLEMENT_APP(App)
+IMPLEMENT_APP(App)
 
 App::App()
 {
@@ -39,9 +41,8 @@ App::~App()
 
 bool App::OnInit()
 {
-    // Create the main windows application
-    Frame *frame = new Frame(wxT("C! IDE"), wxSize(1000, 800));
-    //Console *console = new Console();
+    // Create the main window application
+    Frame *frame = new Frame(wxT("C! IDE"), wxDefaultSize);
 
     // Show it
     frame -> Show(true);

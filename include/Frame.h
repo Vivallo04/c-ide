@@ -17,6 +17,7 @@ public:
     void OnAbout(wxCommandEvent &event);
     void OnSize(wxSizeEvent &event);
     void OnButtonOK(wxCommandEvent &event);
+    void CreateMenuBar();
     void CreateExtraWindows();
 
 private:
