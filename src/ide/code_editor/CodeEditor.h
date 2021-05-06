@@ -14,6 +14,7 @@ private:
 public:
     explicit CodeEditor(wxPanel *parent);
     void SetCodeEditorFont();
+    void ReadLine();
 };
 
 

@@ -18,20 +18,19 @@ void RAMLV::CreateGrid(wxPanel *parent)
     // Create a wxGrid object
     grid = new wxGrid(parent, wxID_ANY,
                               wxPoint(0, 0),
-                              wxSize(323, 720));
+                              wxSize(423, 820));
 
     // Set the grid dimensions
-    grid -> CreateGrid(14, 4);
+    grid -> CreateGrid(18, 4);
 
     // Set Row and Column sizes
     grid -> SetRowSize(1, 2);
     grid -> SetColSize(0, 10);
     //grid -> EnableGridLines(false);
-    grid -> SetColLabelValue(0, wxT("Addres"));
+    grid -> SetColLabelValue(0, wxT("Address"));
     grid -> SetColLabelValue(1, wxT("Name"));
     grid -> SetColLabelValue(2, wxT("Value"));
     grid -> SetColLabelValue(3, wxT("Reference"));
-
 
     for (size_t i = 0; i < grid -> GetNumberRows(); i++)
     {
@@ -45,7 +44,7 @@ void RAMLV::CreateGrid(wxPanel *parent)
 
 }
 
-void RAMLV::PopulateGrid(wxGrid *grid, long *address, std::string name, int *value, int ref_num)
+void RAMLV::PopulateGrid(long *address, std::string name, int *value, int ref_num)
 {
     for(int i = 0; i < grid -> GetNumberRows(); i++)
     {

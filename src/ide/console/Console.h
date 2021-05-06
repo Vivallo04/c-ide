@@ -6,14 +6,15 @@
 #define C_IDE_CONSOLE_H
 
 
-class Console: wxAppConsole
+class Console
 {
-
 public:
-    bool OnInit();
-    int OnRun();
+    explicit Console(wxPanel *parent);
 
 private:
+    Console(wxFrame *parent);
+
+    wxTextCtrl *std_output;
 
 };
 

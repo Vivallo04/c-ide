@@ -19,8 +19,9 @@ private:
 public:
     explicit RAMLV(wxPanel *parent);
     void CreateGrid(wxPanel *parent);
-    void PopulateGrid(wxGrid *grid, long *address, std::string name, int *value, int ref_num);
+    void PopulateGrid(long *address, std::string name, int *value, int ref_num);
     wxGrid *GetGrid();
+
 };
 
 

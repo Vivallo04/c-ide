@@ -4,6 +4,9 @@
 
 #include "CodeEditor.h"
 #define ID_TextBox 201
+#include "wx/wx.h"
+#include <iostream>
+
 
 /**
  * Constructor
@@ -12,8 +15,6 @@
  */
 CodeEditor::CodeEditor(wxPanel *parent)
 {
-    textControl = new wxTextCtrl;
-
     // Parent must be left
     textControl = new wxTextCtrl(parent, ID_TextBox, wxT(""), wxDefaultPosition,
                                  wxSize(1280, 800),wxTE_MULTILINE | wxTE_RICH,
@@ -29,4 +30,15 @@ void CodeEditor::SetCodeEditorFont()
     wxFont font = wxFont(wxSize(20, 20), wxFontFamily::wxFONTFAMILY_TELETYPE,
                          wxFontStyle::wxFONTSTYLE_NORMAL, wxFontWeight::wxFONTWEIGHT_NORMAL);
     textControl -> SetFont(font);
+}
+
+void CodeEditor::ReadLine()
+{
+    wxString line;
+
+    for(int i = 0; i < textControl -> GetNumberOfLines(); i++)
+    {
+        line = textControl -> GetLineText(i);
+        std::cout << line << std::endl;
+    }
 }

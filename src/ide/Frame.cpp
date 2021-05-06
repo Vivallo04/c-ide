@@ -4,10 +4,7 @@
 #include "wx/wx.h"
 #include "../../include/Frame.h"
 #include "wx/splitter.h"
-#include "./ram_live_view/RAMLV.h"
-#include "./application_log/LoggingFrame.h"
-#include "./code_editor/CodeEditor.h"
-
+#define RUN_CODE
 
 /* In order to create a static event table(one that's created at compile time)
  * you need to:
@@ -26,7 +23,7 @@ BEGIN_EVENT_TABLE(Frame, wxFrame)
     EVT_MENU(wxID_ABOUT, Frame::OnAbout)
     EVT_MENU(wxID_EXIT, Frame::OnQuit)
     EVT_SIZE(Frame::OnSize)
-    EVT_BUTTON(wxID_OK, Frame::OnButtonOK)
+    //EVT_BUTTON(wxID_OK, CodeEditor::ReadLine)
 END_EVENT_TABLE()
 
 
@@ -40,35 +37,41 @@ Frame::Frame(const wxString &title, const wxSize &size) : wxFrame(NULL, wxID_ANY
                                                            wxDefaultPosition, wxDefaultSize,
                                                            wxSP_BORDER | wxSP_LIVE_UPDATE);
 
-    wxPanel *left   = new wxPanel(splitterWindow);
+
+    wxPanel *left = new wxPanel(splitterWindow);
+    wxPanel *bottomLeft = new wxPanel(splitterWindow);
+
     wxPanel *right  = new wxPanel(rightSplitter);
     wxPanel *bottom = new wxPanel(rightSplitter);
 
+    //bottomLeft ->SetBackgroundColour(wxColour(255, 100, 50));
     left -> SetBackgroundColour(wxColour(200, 100, 100));
     right -> SetBackgroundColour(wxColour(100, 200, 100));
     bottom -> SetBackgroundColour(wxColour(0, 0, 0));
 
-    rightSplitter -> SetMinimumPaneSize(400);
-    rightSplitter -> SplitHorizontally(right, bottom);
 
-    splitterWindow -> SetMinimumPaneSize(1000);
+    splitterWindow -> SetMinimumPaneSize(910);
     splitterWindow -> SplitVertically(left, rightSplitter);
 
+    rightSplitter -> SetMinimumPaneSize(496);
+    rightSplitter -> SplitHorizontally(right, bottom);
 
 
     // Add the RAM LIVE VIEW Panel
-    RAMLV *ramlv = new RAMLV(right);
+    ramlv = new RAMLV(right);
 
     //Add the code editor space
-    CodeEditor *codeEditor = new CodeEditor(left);
+    codeEditor = new CodeEditor(left);
 
     //Add the logging frame
-    LoggingFrame *logFrame = new LoggingFrame(bottom);
+    logFrame = new LoggingFrame(bottom);
+    wxLogMessage(wxT("Welcome to C! IDE"));
+    wxLogMessage(wxT("Initializing mserver..."));
 
-    //TODO: 1- solve log out from the new LoggingFrame class
-    // 2- add the interpreter, save files and create new ones.
+    //TODO: add the interpreter, save files and create new ones.
     // 3- Create a connection between mserver and the C! IDE using sockets
     // 4- Remember to create a separate thread for mserver.
+    // 5 - Change the UI Add stdout
 
 
     CreateMenuBar();
@@ -131,7 +134,7 @@ void Frame::CreateMenuBar()
                        wxT("Quit this program"));
     fileMenu -> AppendSeparator();
 
-    runButton -> Append(wxID_ANY, wxT("&Run C! code\tShift-F10"),
+    runButton -> Append(wxID_EXECUTE, wxT("&Run C! code\tShift-F10"),
                         wxT("RUN"));
     runButton -> AppendSeparator();
 
@@ -150,4 +153,9 @@ void Frame::CreateMenuBar()
 
     // Attach this menu bar to the frame
     SetMenuBar(menuBar);
+}
+
+void Frame::ExecuteEditor()
+{
+    codeEditor -> ReadLine();
 }

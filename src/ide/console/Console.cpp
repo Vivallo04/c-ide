@@ -1,16 +1,10 @@
-//
-// Created by vivallo on 4/12/21.
-//
-
+#include <wx/generic/panelg.h>
+#include "wx/wx.h"
 #include "Console.h"
 
-bool Console::OnInit()
-{
-    //wxString port = '1234';
-    return true;
-}
 
-int Console::OnRun()
+Console::Console(wxFrame *parent)
 {
-
+    std_output = new wxTextCtrl(parent, wxID_ANY, wxEmptyString, wxDefaultPosition,
+                                wxSize(420, 150), wxTE_MULTILINE | wxTE_READONLY);
 }
